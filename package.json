@@ -4,6 +4,9 @@
   "description": "a example for practicing Sequelize",
   "main": "index.js",
   "scripts": {
+    "init": "node_modules/.bin/sequelize init",
+    "create": "node_modules/.bin/sequelize db:create",
+    "create:prod": "node_modules/.bin/sequelize db:create --env production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +22,9 @@
   "dependencies": {
     "mysql2": "^1.6.5",
     "sequelize": "^4.42.1"
+  },
+  "devDependencies": {
+    "env2": "^2.2.2",
+    "sequelize-cli": "^5.4.0"
   }
 }
