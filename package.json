@@ -1,30 +1,38 @@
 {
-  "name": "sequelize-example",
-  "version": "1.0.0",
-  "description": "a example for practicing Sequelize",
-  "main": "index.js",
-  "scripts": {
-    "init": "node_modules/.bin/sequelize init",
-    "create": "node_modules/.bin/sequelize db:create",
-    "create:prod": "node_modules/.bin/sequelize db:create --env production",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FatGe/Sequelize-example.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/FatGe/Sequelize-example/issues"
-  },
-  "homepage": "https://github.com/FatGe/Sequelize-example#readme",
-  "dependencies": {
-    "mysql2": "^1.6.5",
-    "sequelize": "^4.42.1"
-  },
-  "devDependencies": {
-    "env2": "^2.2.2",
-    "sequelize-cli": "^5.4.0"
-  }
+    "name": "sequelize-example",
+    "version": "1.0.0",
+    "description": "a example for practicing Sequelize",
+    "main": "index.js",
+    "scripts": {
+        "init": "node_modules/.bin/sequelize init",
+        "create": "node_modules/.bin/sequelize db:create",
+        "create:prod": "node_modules/.bin/sequelize db:create --env production",
+        "migration": "node_modules/.bin/sequelize migration:create --name create-examples-table",
+        "migration:prod": "node_modules/.bin/sequelize migration:create --name create-examples-table --env production",
+        "migrate": "node_modules/.bin/sequelize db:migrate",
+        "migrate:prod": "node_modules/.bin/sequelize db:migrate --env production",
+        "seeder": "node_modules/.bin/sequelize seed:create --name init-users",
+        "seeder:prod": "node_modules/.bin/sequelize seed:create --name init-users --env production",
+        "seed": "node_modules/.bin/sequelize db:seed:all",
+        "seed:prod": "node_modules/.bin/sequelize db:seed:all --env production",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/FatGe/Sequelize-example.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/FatGe/Sequelize-example/issues"
+    },
+    "homepage": "https://github.com/FatGe/Sequelize-example#readme",
+    "dependencies": {
+        "mysql2": "^1.6.5",
+        "sequelize": "^4.42.1"
+    },
+    "devDependencies": {
+        "env2": "^2.2.2",
+        "sequelize-cli": "^5.4.0"
+    }
 }
